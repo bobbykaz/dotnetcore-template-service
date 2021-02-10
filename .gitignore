@@ -1,0 +1,17 @@
+**/bin
+**/obj
+
+**/.vs
+
+**/appsettings.Development.json
+
+**/TestResults
+**/coverage.opencover.xml
+
+AppDb.db
+
+**/FluffySpoon*
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
