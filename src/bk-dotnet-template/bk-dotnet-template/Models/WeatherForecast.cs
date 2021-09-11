@@ -1,9 +1,15 @@
 using System;
+using System.Collections.Generic;
 
 namespace bk_dotnet_template.Models
 {
     public class WeatherForecast
     {
+        public static readonly string[] Summaries = new[]
+        {
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        };
+
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }

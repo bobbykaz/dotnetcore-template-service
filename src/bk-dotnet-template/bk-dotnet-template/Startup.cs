@@ -33,6 +33,10 @@ namespace bk_dotnet_template
 
             Log.Logger.Information($"App Startup");
 
+            services.AddMvc(options => {
+                options.EnableEndpointRouting = false;
+                options.Filters.Add(typeof(LoggingActionFilter));
+            });
             services.AddControllers(options => {
                 options.Filters.Add(typeof(LoggingActionFilter));
             });
@@ -86,11 +90,24 @@ namespace bk_dotnet_template
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
+
+            app.UseStaticFiles();
 
             if (bool.Parse(Configuration["LetsEncrypt:Enabled"]))
             {
                 app.UseFluffySpoonLetsEncrypt();
             }
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
 
             app.UseHttpsRedirection();
 
