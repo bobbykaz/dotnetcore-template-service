@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bk-dotnet-template", "bk-dotnet-template\bk-dotnet-template.csproj", "{1DC370F1-9FC7-4D9B-9B6A-933C287F06C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BK.DotNet.Template", "BK.DotNet.Template\BK.DotNet.Template.csproj", "{1DC370F1-9FC7-4D9B-9B6A-933C287F06C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

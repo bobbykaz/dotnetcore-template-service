@@ -9,8 +9,8 @@
     [string]$ecr = "127.0.0.1/not-a-real-ecr-repo"
  )
 
-$pathToDockerfile = ".\src\bk-dotnet-template\bk-dotnet-template\Dockerfile"
-$dockerDir = ".\src\bk-dotnet-template"
+$pathToDockerfile = ".\src\BK.DotNet.Template\BK.DotNet.Template\Dockerfile"
+$dockerDir = ".\src\BK.DotNet.Template"
 $imageName = "bk-template"
 
 

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>bk_dotnet_template</RootNamespace>
+    <RootNamespace>BK.DotNet.Template</RootNamespace>
     <UserSecretsId>26024736-d7ca-4dfc-9f77-3db805221d32</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>

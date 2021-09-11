@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using bk_dotnet_template.Models;
+using BK.DotNet.Template.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace bk_dotnet_template.Controllers
+namespace BK.DotNet.Template.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

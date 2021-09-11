@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace bk_dotnet_template
+namespace BK.DotNet.Template
 {
     public class Program
     {

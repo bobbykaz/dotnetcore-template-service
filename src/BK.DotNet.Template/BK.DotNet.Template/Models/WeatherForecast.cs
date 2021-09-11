@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace bk_dotnet_template.Models
+namespace BK.DotNet.Template.Models
 {
     public class WeatherForecast
     {

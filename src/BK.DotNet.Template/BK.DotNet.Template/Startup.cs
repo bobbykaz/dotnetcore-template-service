@@ -1,4 +1,4 @@
-using bk_dotnet_template.Helpers;
+using BK.DotNet.Template.Helpers;
 using Certes;
 using FluffySpoon.AspNet.EncryptWeMust;
 using FluffySpoon.AspNet.EncryptWeMust.Certes;
@@ -12,7 +12,7 @@ using Serilog;
 using System;
 using System.Linq;
 
-namespace bk_dotnet_template
+namespace BK.DotNet.Template
 {
     public class Startup
     {

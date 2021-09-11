@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Serilog;
 
-namespace bk_dotnet_template.Helpers
+namespace BK.DotNet.Template.Helpers
 {
     public class LoggingActionFilter : IActionFilter
     {

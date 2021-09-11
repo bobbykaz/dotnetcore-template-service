@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build
 WORKDIR /src
-COPY ["bk-dotnet-template/bk-dotnet-template.csproj", "bk-dotnet-template/"]
-RUN dotnet restore "bk-dotnet-template/bk-dotnet-template.csproj"
+COPY ["BK.DotNet.Template/BK.DotNet.Template.csproj", "BK.DotNet.Template/"]
+RUN dotnet restore "BK.DotNet.Template/BK.DotNet.Template.csproj"
 COPY . .
-WORKDIR "/src/bk-dotnet-template"
-RUN dotnet build "bk-dotnet-template.csproj" -c Release -o /app/build
+WORKDIR "/src/BK.DotNet.Template"
+RUN dotnet build "BK.DotNet.Template.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "bk-dotnet-template.csproj" -c Release -o /app/publish
+RUN dotnet publish "BK.DotNet.Template.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "bk-dotnet-template.dll"]
+ENTRYPOINT ["dotnet", "BK.DotNet.Template.dll"]
