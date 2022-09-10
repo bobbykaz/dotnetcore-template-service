@@ -1,5 +1,7 @@
-﻿using BK.DotNet.Template.Models;
+﻿using BK.DotNet.Api.Model;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,16 +16,11 @@ namespace BK.DotNet.Template.Controllers
             return View();
         }
 
-        public IActionResult Weather()
+        public async Task<IActionResult> Weather()
         {
-            var rng = new Random();
-            var weathers = Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = WeatherForecast.Summaries[rng.Next(WeatherForecast.Summaries.Length)]
-            })
-            .ToList();
+            //URL copied from launchSettings.json
+            var client = new BK.DotNet.Api.Client.Client("https://localhost:5001", null, Log.Logger);
+            var weathers = await client.GetWeatherForecastsAsync();
 
             return View(weathers);
         }
